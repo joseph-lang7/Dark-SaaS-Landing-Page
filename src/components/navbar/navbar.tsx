@@ -6,8 +6,8 @@ import Image from "next/image";
 const NavBar = () => {
   return (
     <div className="bg-black">
-      <div className="px-4">
-        <div className="p-4 flex items-center justify-between">
+      <div className="px-2 py-2">
+        <div className="flex items-center justify-between">
           <div className="flex items-center">
             <Image src={Logo} alt="Sass logo" className=" object-cover" />
             <span className="text-white gap-2 hidden sm:inline-flex">
