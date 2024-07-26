@@ -17,7 +17,7 @@ const NavBar = () => {
             </span>
           </div>
           <MenuIcon className="text-white sm:hidden" />
-          <button className="hidden sm:inline-block bg-white py-2 px-4 rounded-md text-black">
+          <button className="hidden sm:inline-block bg-white py-2 px-4 rounded-md text-black hover:bg-black hover:text-white transition-colors duration-300">
             Get for free
           </button>
         </div>

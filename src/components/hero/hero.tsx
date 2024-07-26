@@ -49,7 +49,7 @@ const Hero = () => {
           </p>
         </div>
         <div className="flex justify-center">
-          <button className="bg-white px-5 py-2 rounded-md text-black font-medium">
+          <button className="bg-white py-2 px-4 rounded-md text-black font-medium hover:bg-black hover:text-white transition-colors duration-300">
             Get for free
           </button>
         </div>
