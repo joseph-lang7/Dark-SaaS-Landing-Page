@@ -13,19 +13,12 @@ const LogoSection = () => {
       </h4>
       <div className="flex flex-col gap-3 md:grid md:grid-cols-1 xl:grid-cols-2 xl:hidden">
         <div className="flex gap-7 justify-between">
-          <Image
-            src={acmeImage}
-            alt="acme logo"
-            height="32"
-            width="146"
-            className=""
-          />
+          <Image src={acmeImage} alt="acme logo" height="32" width="146" />
           <Image
             src={quantumImage}
             alt="quantum logo"
             height="32"
             width="125"
-            className=""
           />
           <Image
             src={echoImage}
@@ -48,7 +41,6 @@ const LogoSection = () => {
             alt="celestial logo"
             height="28"
             width="115"
-            className=""
           />
           <Image
             src={pulseImage}
@@ -91,7 +83,6 @@ const LogoSection = () => {
           alt="celestial logo"
           height="28"
           width="115"
-          className=""
         />
         <Image
           src={pulseImage}
