@@ -6,8 +6,8 @@ import cursorImage2 from "../../assets/images/cursor-2.png";
 import Image from "next/image";
 const Hero = () => {
   return (
-    <div className="bg-black text-white bg-[linear-gradient(to_bottom,#000,#200D42_34%,#4F21A1_65%,#A46EDB_82%)] relative overflow-hidden ">
-      <div className="absolute h-[375px] w-[750px] sm:w-[2100px] sm:h-[900px] rounded-[100%] bg-black left-1/2 -translate-x-1/2 border border-[#B48CDE] bg-[radial-gradient(closest-side,#000_90%,#9560EB)] top-[calc(100%-120px)]"></div>
+    <div className="text-white bg-[linear-gradient(to_bottom,#000,#200D42_34%,#4F21A1_65%,#A46EDB_82%)] relative overflow-hidden ">
+      <div className="absolute h-[375px] w-[750px] sm:w-[2100px] sm:h-[900px] rounded-[100%] left-1/2 -translate-x-1/2 border border-[#B48CDE] bg-[radial-gradient(closest-side,#000_90%,#9560EB)] top-[calc(100%-120px)]"></div>
       <div className="flex flex-col gap-[32px] pt-[64.5px] pb-[89.5px] px-[27.5px] relative">
         <div className="flex justify-center">
           <a

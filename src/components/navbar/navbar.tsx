@@ -5,7 +5,7 @@ import FramerIcon from "../../assets/icons/framer.svg";
 import Image from "next/image";
 const NavBar = () => {
   return (
-    <div className="bg-black">
+    <div>
       <div className="px-2 py-2">
         <div className="flex items-center justify-between">
           <div className="flex items-center">

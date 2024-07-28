@@ -7,8 +7,8 @@ import apexImage from "../../assets/images/apex.png";
 import Image from "next/image";
 const LogoSection = () => {
   return (
-    <div className="flex flex-col items-center justify-center bg-black pb-[62px] pt-[20px]">
-      <h4 className="text-[#7A7A7A] w-[185px] sm:w-max text-sm text-center pb-[38px]">
+    <div className="flex flex-col items-center justify-center pt-[20px]">
+      <h4 className="text-[#7A7A7A] text-sm text-center pb-[38px]">
         Trusted by the world&apos;s most innovative teams
       </h4>
       <div className="flex flex-col gap-3 md:grid md:grid-cols-1 xl:grid-cols-2 xl:hidden">

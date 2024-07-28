@@ -3,7 +3,7 @@ import leafImage from "../../assets/images/leaf.png";
 import Image from "next/image";
 const Features = () => {
   return (
-    <div className="bg-black pb-[100px]">
+    <div className="pb-[100px]">
       <div className="pt-32">
         <div className="flex justify-center">
           <div className="flex flex-col items-center justify-center gap-5 px-[15px] pb-[66px]">
