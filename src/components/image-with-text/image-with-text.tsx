@@ -5,7 +5,7 @@ import xlAppImage from "../../assets/images/app-xl.png";
 import Image from "next/image";
 const ImageWithText = () => {
   return (
-    <div className="bg-[linear-gradient(to_bottom,#000000,#4C248A_38%,#05020A_100%)]">
+    <div className="bg-gradient-to-b from-black to-[#5D2CA8]">
       <div className="flex flex-col text-white pt-[93px] px-[17.5px] pb-[60px] gap-[20px]">
         <h2 className="text-[32px] md:text-[54px] font-semibold text-center">
           Intuitive Interface
