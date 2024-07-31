@@ -5,6 +5,7 @@ import LogoSection from "@/components/logo-section/logo-section";
 import Features from "@/components/features/features";
 import ImageWithText from "@/components/image-with-text/image-with-text";
 import Faqs from "@/components/faqs/faqs";
+import Subscription from "@/components/subscription/subscription";
 export default function Home() {
   return (
     <div className="bg-black">
@@ -15,6 +16,7 @@ export default function Home() {
       <Features />
       <ImageWithText />
       <Faqs />
+      <Subscription />
     </div>
   );
 }
