@@ -29,7 +29,7 @@ const Subscription = () => {
             />
           </div>
         </div>
-        <div className="flex justify-center pb-[73px]">
+        <div className="flex justify-center pb-[20px]">
           <div className="flex flex-col md:flex-row gap-[10px] w-full px-[52px] md:px-0">
             <input
               type="email"
