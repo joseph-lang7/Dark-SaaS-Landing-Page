@@ -1,9 +1,11 @@
+"use client";
 import WhiteArrow from "../../../public/vector-white.svg";
 import cursorImage from "../../assets/images/cursor.png";
 import messageImage from "../../assets/images/message.png";
 import messageImage2 from "../../assets/images/message-2.png";
 import cursorImage2 from "../../assets/images/cursor-2.png";
 import Image from "next/image";
+import { motion } from "framer-motion";
 const Hero = () => {
   return (
     <div className="text-white bg-[linear-gradient(to_bottom,#000,#200D42_34%,#4F21A1_65%,#A46EDB_82%)] relative overflow-hidden ">
@@ -26,20 +28,32 @@ const Hero = () => {
             <h1 className="text-[54px] lg:text-[200px] sm:text-[120px] tracking-tighter font-bold text-center lg:leading-[165px] sm:leading-[100px] leading-10">
               One Task <br /> at a Time
             </h1>
-            <Image
-              src={cursorImage2}
-              alt="cursor image"
-              height="200"
-              width="200"
+            <motion.div
               className="absolute left-[-140px] top-[55%] hidden xl:block"
-            />
-            <Image
-              src={messageImage2}
-              alt="message image"
-              height="200"
-              width="200"
+              drag
+              dragSnapToOrigin
+            >
+              <Image
+                src={cursorImage2}
+                alt="cursor image"
+                height="200"
+                width="200"
+                draggable="false"
+              />
+            </motion.div>
+            <motion.div
               className="absolute right-[-170px] top-[32%] hidden xl:block"
-            />
+              drag
+              dragSnapToOrigin
+            >
+              <Image
+                src={messageImage2}
+                alt="message image"
+                height="200"
+                width="200"
+                draggable="false"
+              />
+            </motion.div>
           </div>
         </div>
         <div className="flex justify-center">
