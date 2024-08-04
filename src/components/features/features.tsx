@@ -1,6 +1,6 @@
 import React from "react";
-import leafImage from "../../assets/images/leaf.png";
-import Image from "next/image";
+import FeatureCard from "./components/feature-card";
+
 const Features = () => {
   return (
     <div className="pb-[100px]">
@@ -18,48 +18,18 @@ const Features = () => {
           </div>
         </div>
         <div className="flex flex-col gap-3 sm:items-center xl:flex-row xl:justify-center">
-          <div className="border border-[#3d3d3d] rounded-md text-white flex flex-col items-center mx-[15px] py-[40px] sm:max-w-[360px]">
-            <div className="pb-[24px]">
-              <div className="bg-white p-[18px] rounded-md">
-                <Image src={leafImage} alt="leaf" />
-              </div>
-            </div>
-            <p className="text-[18px] font-bold pb-[8px]">
-              Integration Ecosystem
-            </p>
-            <p className="text-center font-medium text-[16px] px-[20px]">
-              Enhance your productivity by connecting with your favorite tools,
-              keeping all your essentials in one place.
-            </p>
-          </div>
-          <div className="border border-[#3d3d3d] rounded-md text-white flex flex-col items-center mx-[15px] py-[40px] sm:max-w-[360px]">
-            <div className="pb-[24px]">
-              <div className="bg-white p-[18px] rounded-md">
-                <Image src={leafImage} alt="leaf" />
-              </div>
-            </div>
-            <p className="text-[18px] font-bold pb-[8px]">
-              Goal setting and tracking
-            </p>
-            <p className="text-center font-medium text-[16px] px-[20px]">
-              Define and track your goals, breaking down objectives into
-              achievable tasks to keep your targets in sight.
-            </p>
-          </div>
-          <div className="border border-[#3d3d3d] rounded-md text-white flex flex-col items-center mx-[15px] py-[40px] sm:max-w-[360px]">
-            <div className="pb-[24px]">
-              <div className="bg-white p-[18px] rounded-md">
-                <Image src={leafImage} alt="leaf" />
-              </div>
-            </div>
-            <p className="text-[18px] font-bold pb-[8px]">
-              Secure data encryption{" "}
-            </p>
-            <p className="text-center font-medium text-[16px] px-[20px] ">
-              With end-to-end encryption, your data is securely stored and
-              protected from unauthorized access.
-            </p>
-          </div>
+          <FeatureCard
+            title="Integration Ecosystem"
+            description="Enhance your productivity by connecting with your favorite tools, keeping all your essentials in one place."
+          />
+          <FeatureCard
+            title="Goal setting and tracking"
+            description="Define and track your goals, breaking down objectives into achievable tasks to keep your targets in sight."
+          />
+          <FeatureCard
+            title="Secure data encryption"
+            description=" With end-to-end encryption, your data is securely stored and protected from unauthorized access."
+          />
         </div>
       </div>
     </div>
