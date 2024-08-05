@@ -1,9 +1,18 @@
-import React from "react";
-import appImage from "../../assets/images/app.png";
-import mdAppImage from "../../assets/images/app-md.png";
+"use client";
+import React, { useRef } from "react";
 import xlAppImage from "../../assets/images/app-xl.png";
 import Image from "next/image";
+import { motion, useScroll, useTransform } from "framer-motion";
 const ImageWithText = () => {
+  const image = useRef<HTMLImageElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: image,
+    offset: ["start end", "end end"],
+  });
+
+  const rotateX = useTransform(scrollYProgress, [0, 1], [15, 0]);
+  const opacity = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
+
   return (
     <div className="bg-gradient-to-b from-black to-[#5D2CA8]">
       <div className="flex flex-col text-white pt-[93px] px-[17.5px] pb-[60px] gap-[20px]">
@@ -18,35 +27,22 @@ const ImageWithText = () => {
           </p>
         </div>
       </div>
-      {/* Small App Image */}
       <div className="flex justify-center">
-        <div className="flex w-[356px] h-[220px] md:hidden justify-center px-[17px] pb-[84px]">
-          <Image
-            src={appImage}
-            alt="app mockup"
-            className="w-full h-full object-cover"
-          />
-        </div>
-      </div>
-      {/* Medium App Image */}
-      <div className="flex justify-center">
-        <div className="justify-center w-[704px] h-[437px] px-[17px] pb-[84px] hidden md:flex xl:hidden">
-          <Image
-            src={mdAppImage}
-            alt="app mockup"
-            className="w-full h-full object-cover"
-          />
-        </div>
-      </div>
-      {/* Large App Image */}
-      <div className="flex w-full justify-center">
-        <div className="justify-center w-[1092px] h-[678px] px-[17px] pb-[84px] hidden xl:flex">
+        <motion.div
+          className="flex justify-center px-[17px] pb-[84px]"
+          style={{
+            opacity: opacity,
+            rotateX: rotateX,
+            transformPerspective: "800px",
+          }}
+        >
           <Image
             src={xlAppImage}
             alt="app mockup"
             className="w-full h-full object-cover"
+            ref={image}
           />
-        </div>
+        </motion.div>
       </div>
     </div>
   );
