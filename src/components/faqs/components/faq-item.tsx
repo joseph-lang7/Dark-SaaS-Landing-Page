@@ -3,6 +3,7 @@ import React from "react";
 import PlusIcon from "../../../assets/icons/plus-icon.svg";
 import MinusIcon from "../../../assets/icons/minus-icon.svg";
 import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 type Props = {
   key: number;
   question: string;
@@ -18,13 +19,26 @@ const FaqItem = ({ key, question, answer }: Props) => {
         key={key}
         className="text-white w-full md:w-[675px] py-[28px] mx-[12px] border-b border-white/30"
       >
-        <div className="flex items-center">
-          <span className="flex-1 font-bold text-[18px]">{question}</span>{" "}
-          <button onClick={() => setIsToggled(!isToggled)}>
-            {isToggled ? <MinusIcon /> : <PlusIcon />}
-          </button>
-        </div>
-        <div className={`${isToggled ? "block" : "hidden"} pt-2`}>{answer}</div>
+        <button
+          onClick={() => setIsToggled(!isToggled)}
+          className="flex w-full"
+        >
+          <span className="flex-1 font-bold text-[18px] text-start">
+            {question}
+          </span>{" "}
+          <span>{isToggled ? <MinusIcon /> : <PlusIcon />}</span>
+        </button>
+        <AnimatePresence>
+          {isToggled && (
+            <motion.div
+              initial={{ opacity: 0, height: 0, paddingTop: 0 }}
+              animate={{ opacity: 1, height: "auto", paddingTop: "8px" }}
+              exit={{ opacity: 0, height: 0, paddingTop: 0 }}
+            >
+              {answer}
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </div>
   );
