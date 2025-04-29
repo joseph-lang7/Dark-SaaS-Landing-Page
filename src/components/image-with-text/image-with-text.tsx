@@ -29,7 +29,7 @@ const ImageWithText = () => {
       </div>
       <div className="flex justify-center">
         <motion.div
-          className="flex justify-center px-[17px] pb-[84px]"
+          className="flex justify-center px-[17px] pb-[84px] lg:w-[1000px] lg:h-[700px]"
           style={{
             opacity: opacity,
             rotateX: rotateX,
